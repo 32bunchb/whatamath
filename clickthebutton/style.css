@@ -1,0 +1,83 @@
+/* Basic body and layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6e7fdb, #f07b79);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Game container */
+#game-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    width: 300px;
+}
+
+/* Title */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Score and Timer */
+#score, #timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Button styles */
+button {
+    padding: 20px 40px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #388e3c;
+}
+
+/* Game Over screen */
+#game-over {
+    font-size: 24px;
+    color: #ff3d3d;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#game-over span {
+    font-size: 32px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Timer animation */
+@keyframes countdown {
+    0% { color: #4CAF50; }
+    50% { color: #FFA500; }
+    100% { color: #FF3D3D; }
+}
+
+#timer {
+    animation: countdown 30s infinite;
+}
